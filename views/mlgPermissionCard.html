@@ -1,0 +1,26 @@
+<div>
+    <div>
+        <span ng-if="permission.children" class="btn btn-xs" ng-click="permission.show_children=!permission.show_children">
+            <span ng-class="{'alert-success':permission.write,'alert-info':!permission.write && permission.read}">
+                <span class="glyphicon" ng-class="{'glyphicon-minus-sign':permission.show_children,'glyphicon-plus-sign':!permission.show_children}"></span>
+            </span>
+        </span>
+        <span ng-if="!permission.children" class="btn btn-xs">
+            <span ng-class="{'alert-success':permission.write,'alert-info':!permission.write && permission.read}">
+                <span class="glyphicon glyphicon-record"></span>
+            </span>
+        </span>
+        <a href="" ng-click="permission.show_settings=!permission.show_settings">{{ permission.name }}
+            &nbsp;<span ng-class="{'icon-caret-right':!permission.show_settings,'icon-caret-down':permission.show_settings}"></span>
+        </a>
+
+        <div ng-show="permission.show_settings" class="container">
+            <button class="btn btn-sm" ng-click="permission.read=!permission.read" ng-class="{'btn-info':permission.read}">Read</button>
+            <button class="btn btn-sm" ng-click="permission.write=!permission.write" ng-class="{'btn-success':permission.write}">Write</button>
+            <input class="form-control input-sm" style="width: 150px; display: inline;" ng-model="permission.name"/>
+            <button class="btn btn-sm btn-info" ng-click="addChild()"><span class="glyphicon glyphicon-plus"></span> Add child</button>
+            <button class="btn btn-sm btn-danger" ng-click="remove()"><span class="glyphicon glyphicon-remove"></span> Remove</button>
+        </div>
+    </div>
+</div>
+

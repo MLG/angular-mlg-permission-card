@@ -1,0 +1,18 @@
+{
+  "name": "angular-mlg-permission-card",
+  "version": "0.0.1",
+  "homepage": "https://github.com/MLG/angular-mlg-permission-card",
+  "authors": [
+    "Eugene OZ <normandiggs@gmail.com>"
+  ],
+  "description": "tree-directive for permission cards",
+  "main": "directive.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
